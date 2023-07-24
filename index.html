@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+          content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--Leaflet css-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+    <title>React App</title>
+    <style>
+        .halfwidth {
+            width: 50vw;
+            height: 100vw;
+        }
+
+        .leftHalf {
+            background: url("Portraita.jpg");
+            width: 600px;
+            position: absolute;
+            left: 50x;
+            height: 800px;
+            
+        }
+
+        .rightHalf {
+            width: 50%;
+            position: absolute;
+            right: 3px;
+            height: 800px;
+        }
+
+        body {
+            font-size: 1.8em;
+            font-weight: 500;
+            letter-spacing: .06em;
+            line-height: 1.7em;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            color: #161616;
+            padding-left: 3%;
+            padding-top: 3%;
+            padding-right: 3%;
+            max-width: 100%;
+            right: 3px;
+        }
+        .smaller {
+            font-size: 1em;
+        }
+
+        #map {
+            width: 1350px;
+            height: 500px;
+        }
+        .sixth {
+            width: 650px;
+            height: 430px;
+            background-color: #d17466;
+            margin: 10px;
+            background: url("RFTA.jpg");
+        }
+
+        .seventh {
+            width: 650px;
+            height: 430px;
+            margin: 10px;
+            background-color: #d17466;
+            background: url("UA.jpg");
+        }
+        .container {
+            width: 1350px;
+            background: #964B00;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 430px;
+            padding-left: 10px;
+        }
+        h4 {
+            font-size: .85em
+        }
+    </style>
+</head>
+
+<body>
+    <b>PHILIP CARR</b><br>
+    Creating Perspective: The Key to Understanding.<br><br>
+    <b>Map Based CV</b>
+<div id="map"></div>
+        <br>
+        <b>Capabilities</b><br>
+        Cartography<br>
+        Data Analysis<br>
+        App Development<br>
+        Scripting <br>
+        Web Development<br><br>
+        <b>Project board</b>
+        <div class="container">
+            <a href="https://docs.google.com/presentation/d/1359ZRQ73s2GMbqVVEoEXpwzrKsKUOIQgZD8jJp2uq58/edit?usp=sharing" class="seventh" title="Unlocking Access: Analyzing Food Insecurity and Equity in Colorado Using the Gravity-Based Accessibility Model."</a>
+            <a href="https://docs.google.com/presentation/d/1359ZRQ73s2GMbqVVEoEXpwzrKsKUOIQgZD8jJp2uq58/edit?usp=sharing" class="sixth" title="Rooftop Farm Asset Finder App: An AGOL app to Identify Sites to Midigate Unequal Patterns In Demographics and Health In Hartford, CT."</a>
+            </a>
+        </div>
+        More studies coming soon to all works. See more designs on
+        <a href="https://github.com/FillCarr">Github</a>,
+        <a href="https://linkedin.com/in/philip-carr">LinkedIn</a> or
+        <a href="https://docs.google.com/document/d/1TmXmGTj_NJXjJHe7WYo09gIF4tEzMK0y3gwJN0c4Eyc/edit?usp=sharing">Resume.</a><br><br>
+
+        <b>About me</b><br>
+        <div class="leftHalf">
+            <br />
+        </div>
+        <div class="rightHalf">
+            Welcome to my website! I'm Philip Carr, a passionate developer located in Central Connecticut. Currently, I'm focused on pursuing a Master's degree in Computer Information Science while actively contributing to the geospatial domain as a data analyst and asset auditor for electric and communication organizations.
+
+            Over the past two years, I've been fortunate to play a pivotal role in driving innovation and supporting various companies in accomplishing their mapping objectives. As a GIS developer, I offer a distinctive approach to problem-solving and acquiring knowledge in the dynamic world of Geographic Information Systems.
+
+            If you're interested in exploring more about my journey and expertise, feel free to navigate through the content on this site. I look forward to sharing my experiences and insights with you!<br />
+
+</body>
+</html>
+<!-- Leaflet JS-->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+//VAR JAR
+    var map = L.map('map').setView([42.3098981, -72.653762], 8);
+   var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+   })
+    var about = L.icon({
+        iconUrl: 'info.png',
+        iconSize: [18, 40]
+    })
+    var edu = L.icon({
+        iconUrl: 'edu.png',
+        iconSize: [18, 40]
+    })
+    var exp = L.icon({
+        iconUrl: 'exp.png',
+        iconSize: [18, 40]
+    })
+// MAP LAYER
+   osm.addTo(map);
+
+    L.marker([41.5596995, -72.6572856],{icon: about}).addTo(map)
+        .bindPopup('Philip Carr is based out of Central Connecticut.'); 
+    L.marker([41.7816685, -72.3355002], { icon: edu }).addTo(map)
+        .bindPopup('Phil recieved a BA in Urban Studies, Post Grad Cert in G.I.S from the University of Connecticut.');
+    L.marker([41.62805, -71.004939], { icon: edu }).addTo(map)
+        .bindPopup('Phil is studying a MS in Computer Science at the University of Massachussets. Planned Conferral: 12/2025.');
+    L.marker([41.652297, -72.674668], { icon: exp }).addTo(map)
+        .bindPopup('Phil worked At CHA with the power distribution planning team, as a Distribution Planner I for 1 year');
+    L.marker([43.06257, -73.802333], { icon: exp }).addTo(map)
+        .bindPopup('Phil now works At Airosmith Development with the GIS team, as a Distribution Planner I for 1 year');
+    L.marker([43.06257, -73.802333], { icon: exp }).addTo(map)
+        .bindPopup('Phil has been working At Airosmith Development since 03/23 with the GIS team, as a GIS Specialist I');
+</script>
