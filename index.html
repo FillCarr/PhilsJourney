@@ -15,6 +15,33 @@
 
     <title>React App</title>
     <style>
+
+        .headbtn {
+            float: left;
+            width: 32.5%;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .headrow {
+            padding: 10px;
+            width: 100%;
+            spacing: 5px; 
+            text-align: center;
+            background: white;
+            color: white;
+            font-size: 5px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            background: white;
+            clear: both;
+        }
+
         .halfwidth {
             width: 50vw;
             height: 100vw;
@@ -26,39 +53,43 @@
             position: absolute;
             left: 50x;
             height: 800px;
-            
+            top: 5px
         }
 
         .rightHalf {
             width: 50%;
             position: absolute;
             right: 3px;
+            left: 700px;
             height: 800px;
         }
 
         body {
+            background: url("WB.jpg");
             font-size: 1.8em;
             font-weight: 500;
             letter-spacing: .06em;
             line-height: 1.7em;
             font-family: 'Times New Roman', Times, serif, sans-serif;
-            color: #161616;
+            color: yellow;
             padding-left: 3%;
             padding-top: 3%;
             padding-right: 3%;
             max-width: 100%;
             right: 3px;
         }
+
         .smaller {
             font-size: 1em;
         }
 
         #map {
-            width: 1350px;
+            width: 100%;
             height: 500px;
         }
+
         .sixth {
-            width: 650px;
+            width: 47%;
             height: 430px;
             background-color: #d17466;
             margin: 10px;
@@ -66,61 +97,68 @@
         }
 
         .seventh {
-            width: 650px;
+            width: 50%;
             height: 430px;
             margin: 10px;
             background-color: #d17466;
             background: url("UA.jpg");
         }
-        .container {
-            width: 1350px;
-            background: #964B00;
+
+        .projbrd {
+            width: 100%;
+            background: red;
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
             flex-wrap: wrap;
             height: 430px;
-            padding-left: 10px;
+            padding-left: 0px;
         }
+
         h4 {
-            font-size: .85em
+            font-size: .85em;
+            color: white
         }
     </style>
 </head>
-
-<body>
+<div class="">
+    <div class="headbtn", style="background: blue">HOME</div>
+    <div class="headbtn", style="background: blue">BLOG</div>
+    <div class="headbtn", style="background: blue">ABOUT</div>
+    </div>
+<br><br>
     <b>PHILIP CARR</b><br>
     Creating Perspective: The Key to Understanding.<br><br>
     <b>Map Based CV</b>
-<div id="map"></div>
-        <br>
-        <b>Capabilities</b><br>
-        Cartography<br>
-        Data Analysis<br>
-        App Development<br>
-        Scripting <br>
-        Web Development<br><br>
-        <b>Project board</b>
-        <div class="container">
-            <a href="https://docs.google.com/presentation/d/1359ZRQ73s2GMbqVVEoEXpwzrKsKUOIQgZD8jJp2uq58/edit?usp=sharing" class="seventh" title="Unlocking Access: Analyzing Food Insecurity and Equity in Colorado Using the Gravity-Based Accessibility Model."</a>
-            <a href="https://docs.google.com/presentation/d/1359ZRQ73s2GMbqVVEoEXpwzrKsKUOIQgZD8jJp2uq58/edit?usp=sharing" class="sixth" title="Rooftop Farm Asset Finder App: An AGOL app to Identify Sites to Midigate Unequal Patterns In Demographics and Health In Hartford, CT."</a>
-            </a>
-        </div>
-        More studies coming soon to all works. See more designs on
-        <a href="https://github.com/FillCarr">Github</a>,
-        <a href="https://linkedin.com/in/philip-carr">LinkedIn</a> or
-        <a href="https://docs.google.com/document/d/1TmXmGTj_NJXjJHe7WYo09gIF4tEzMK0y3gwJN0c4Eyc/edit?usp=sharing">Resume.</a><br><br>
+    <div id="map"></div>
+    <br>
+    <b>Capabilities</b><br>
+    Cartography<br>
+    Data Analysis<br>
+    App Development<br>
+    Scripting <br>
+    Web Development<br><br>
+    <b>Project board</b>
+    <div class="projbrd">
+        <a href="https://docs.google.com/presentation/d/1359ZRQ73s2GMbqVVEoEXpwzrKsKUOIQgZD8jJp2uq58/edit?usp=sharing" class="seventh" title="Unlocking Access: Analyzing Food Insecurity and Equity in Colorado Using the Gravity-Based Accessibility Model."</a>
+        <a href="https://docs.google.com/presentation/d/1359ZRQ73s2GMbqVVEoEXpwzrKsKUOIQgZD8jJp2uq58/edit?usp=sharing" class="sixth" title="Rooftop Farm Asset Finder App: An AGOL app to Identify Sites to Midigate Unequal Patterns In Demographics and Health In Hartford, CT."</a>
+        </a>
+    </div>
+    More studies coming soon to all works. See more designs on
+    <a href="https://github.com/FillCarr">Github</a>,
+    <a href="https://linkedin.com/in/philip-carr">LinkedIn</a> or
+    <a href="https://docs.google.com/document/d/1TmXmGTj_NJXjJHe7WYo09gIF4tEzMK0y3gwJN0c4Eyc/edit?usp=sharing">Resume.</a><br><br>
 
-        <b>About me</b><br>
-        <div class="leftHalf">
-            <br />
-        </div>
-        <div class="rightHalf">
-            Welcome to my website! I'm Philip Carr, a passionate developer located in Central Connecticut. Currently, I'm focused on pursuing a Master's degree in Computer Information Science while actively contributing to the geospatial domain as a data analyst and asset auditor for electric and communication organizations.
+    <b>About me</b><br>
+    <div class="leftHalf">
+        <br />
+    </div>
+    <div class="rightHalf">
+        Welcome to my website! I'm Philip Carr, a passionate developer located in Central Connecticut. Currently, I'm focused on pursuing a Master's degree in Computer Information Science while actively contributing to the geospatial domain as a data analyst and asset auditor for electric and communication organizations.
 
-            Over the past two years, I've been fortunate to play a pivotal role in driving innovation and supporting various companies in accomplishing their mapping objectives. As a GIS developer, I offer a distinctive approach to problem-solving and acquiring knowledge in the dynamic world of Geographic Information Systems.
+        Over the past two years, I've been fortunate to play a pivotal role in driving innovation and supporting various companies in accomplishing their mapping objectives. As a GIS developer, I offer a distinctive approach to problem-solving and acquiring knowledge in the dynamic world of Geographic Information Systems.
 
-            If you're interested in exploring more about my journey and expertise, feel free to navigate through the content on this site. I look forward to sharing my experiences and insights with you!<br />
+        If you're interested in exploring more about my journey and expertise, feel free to navigate through the content on this site. I look forward to sharing my experiences and insights with you!<br />
 
 </body>
 </html>
@@ -148,7 +186,7 @@
    osm.addTo(map);
 
     L.marker([41.5596995, -72.6572856],{icon: about}).addTo(map)
-        .bindPopup('Philip Carr is based out of Central Connecticut.'); 
+        .bindPopup('Philip Carr is based out of Central Connecticut.');
     L.marker([41.7816685, -72.3355002], { icon: edu }).addTo(map)
         .bindPopup('Phil recieved a BA in Urban Studies, Post Grad Cert in G.I.S from the University of Connecticut.');
     L.marker([41.62805, -71.004939], { icon: edu }).addTo(map)
